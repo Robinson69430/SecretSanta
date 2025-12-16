@@ -33,7 +33,17 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {   
+        IsDead();
         _coinsText.text = coins + "$";
+    }
+
+    private void IsDead()
+    {
+        if (playerHealh.currentHealth < 0)
+        {
+            Debug.Log("Game Over");
+            transform.position = checkpoint.position;
+        }
     }
 
     
