@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using DefaultNamespace;
 using TMPro;
 
 public class TagPuzzle : MonoBehaviour
@@ -11,8 +12,11 @@ public class TagPuzzle : MonoBehaviour
     public InputField mise;
     public TextMeshProUGUI afficherMise;
     public int miser;
-    public GameManager gm;
     public TextMeshProUGUI pileText;
+
+    public GameManager gm;
+    
+
     
     void Start()
     {

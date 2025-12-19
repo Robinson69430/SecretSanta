@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
@@ -8,9 +9,14 @@ namespace DefaultNamespace
         private Rigidbody2D rb;
         private Vector2 movement;
 
+        public Button _augmenterVitesse;
+        
+        
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            
+            _augmenterVitesse.onClick.AddListener(() => VitesseSup());
         }
 
         void Update()
@@ -24,6 +30,11 @@ namespace DefaultNamespace
         void FixedUpdate()
         {
             rb.linearVelocity = movement * speed;
+        }
+
+        public void VitesseSup()
+        {
+            speed += 0.5f;
         }
     }
     
