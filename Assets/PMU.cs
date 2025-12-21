@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Rendering;
+
 
 public class PMU : MonoBehaviour
 {
@@ -9,11 +12,14 @@ public class PMU : MonoBehaviour
     private static int winner = -1;
     private static bool gameStopped = false;
 
-
+    public GameObject PMUPanel;
+    
     private Rigidbody2D rb;
 
     void Start()
     {
+        PMUPanel.SetActive(false);
+        
         rb = GetComponent<Rigidbody2D>();
         Game();
     }
@@ -29,7 +35,7 @@ public class PMU : MonoBehaviour
             currentSpeed = speed + 2f;
         }
 
-        rb.velocity = Vector2.up * currentSpeed;
+        rb.linearVelocity = Vector2.up * currentSpeed;
     }
 
 

@@ -28,8 +28,6 @@ public class PlayerHealh : MonoBehaviour
 
         vignette.color.value = Color.black;
         vignette.intensity.value = 0.5f;
-        
-        
     }
 
     private void Update()
